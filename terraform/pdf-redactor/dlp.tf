@@ -39,6 +39,39 @@ resource "google_data_loss_prevention_inspect_template" "dlp_pdf_template" {
     info_types {
       name = "GENERIC_ID"
     }
+    info_types {
+      name = "MALE_NAME"
+    }
+    info_types {
+      name = "ETHNIC_GROUP"
+    }
+    info_types {
+      name = "US_SOCIAL_SECURITY_NUMBER"
+    }
+    info_types {
+      name = "VEHICLE_IDENTIFICATION_NUMBER"
+    }
+    info_types {
+      name = "US_DRIVERS_LICENSE_NUMBER"
+    }
+    info_types {
+      name = "US_PREPARER_TAXPAYER_IDENTIFICATION_NUMBER"
+    }
+    info_types {
+      name = "US_EMPLOYER_IDENTIFICATION_NUMBER"
+    }
+    info_types {
+      name = "US_PASSPORT"
+    }
+    info_types {
+      name = "US_INDIVIDUAL_TAXPAYER_IDENTIFICATION_NUMBER"
+    }
+    info_types {
+      name = "US_MEDICARE_BENEFICIARY_ID_NUMBER"
+    }
+    info_types {
+      name = "US_MEDICARE_BENEFICIARY_ID_NUMBER"
+    }
   }
 
   depends_on = [
