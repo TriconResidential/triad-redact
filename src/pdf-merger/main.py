@@ -84,6 +84,8 @@ def concatenate_images_into_pdf(files_bucket, files_to_concatenate,
         # Cleanup local files
         os.remove(temp_image_name)
         os.remove(searchable_page_pdf_file)
+        #Recently added... not sure if it works
+        blob.delete()
 
     # Write searchable pdf to disk and upload to GCS
     searchable_concatenated_pdf = f"{str(uuid.uuid4())}.pdf"
@@ -99,6 +101,8 @@ def concatenate_images_into_pdf(files_bucket, files_to_concatenate,
 
     # Cleanup local files
     os.remove(searchable_concatenated_pdf)
+    #Recently added... not sure if it works
+    out_blob.delete()
 
     # result
     return {

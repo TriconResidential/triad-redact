@@ -33,6 +33,12 @@ resource "google_data_loss_prevention_inspect_template" "dlp_pdf_template" {
     info_types {
       name = "FIRST_NAME"
     }
+    info_types {
+      name = "AGE"
+    }
+    info_types {
+      name = "GENERIC_ID"
+    }
   }
 
   depends_on = [
